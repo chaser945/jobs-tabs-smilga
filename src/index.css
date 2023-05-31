@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+:root {
+  --accent: #7277cc;
+  --gray: #cbd5e1;
+  --dark-gray: #728196;
+  --text-gray: #475264;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+}
+
+p {
+  color: var(--text-gray);
+}
+
+/* /JOBS CONTAINER */
+/* ============ */
+
+.jobs-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jobs-header {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 0.3em;
+}
+
+.underline {
+  width: 75px;
+  height: 5px;
+  background-color: var(--accent);
+}
+
+/* JOBS BTNS */
+/* ========= */
+
+.job-btn-container {
+  margin-top: 1.3em;
+  display: flex;
+  gap: 1.2em;
+}
+
+.job-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.job-btn:hover {
+  color: var(--accent);
+  border-bottom: var(--accent) 2px solid;
+}
+
+.job-btn.is-active {
+  color: var(--accent);
+  border-bottom: var(--accent) 2px solid;
+}
+
+/* JOBS CARD */
+/* ========= */
+
+.job-title {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.job-tag {
+  background-color: var(--gray);
+  padding: 0.3em 0.7em;
+  border-radius: 5px;
+}
+
+.job-date {
+  color: var(--dark-gray);
+}
+
+.job-info-card {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-chevron {
+  color: var(--accent);
+}
+
+@media (min-width: 751px) {
+  .jobs-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .job-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+  }
+}
